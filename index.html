@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Analysis Application</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .upload-section {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #upload-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #upload-input {
+        display: none;
+    }
+    #upload-label {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    #upload-label:hover {
+        background-color: #0056b3;
+    }
+    #upload-btn {
+        margin-left: 10px;
+    }
+    #result-section {
+        display: none;
+        margin-top: 30px;
+    }
+    #result {
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Image Analysis Application</h1>
+    <div class="upload-section">
+        <form id="upload-form">
+            <input type="file" id="upload-input" accept="image/*">
+            <label for="upload-input" id="upload-label">Upload Image</label>
+            <button type="submit" id="upload-btn">Analyze</button>
+        </form>
+    </div>
+    <div id="result-section">
+        <div id="result"></div>
+    </div>
+</div>
+</body>
+</html>
